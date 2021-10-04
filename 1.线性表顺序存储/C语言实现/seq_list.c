@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "seq_list.h"
 
 /* 用来实现顺序线性表的一个结构体 */
