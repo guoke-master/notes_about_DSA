@@ -13,6 +13,7 @@ typedef struct TAG_SEQ_LIST
 
 
 /* 创建顺序线性表，返回顺序线性表的地址 */
+// O(1)
 SEQ_LIST* SeqList_Create(int capacity)
 {
 	TAG_SEQ_LIST* seq_list = NULL;		// 线性表指针
@@ -52,6 +53,7 @@ SEQ_LIST* SeqList_Create(int capacity)
 
 
 /* 销毁顺序线性表的空间 */
+// O(1)
 void SeqList_Destroy(SEQ_LIST* list)
 {
 	TAG_SEQ_LIST* seq_list = NULL;
@@ -79,6 +81,7 @@ void SeqList_Destroy(SEQ_LIST* list)
 
 
 /* 清空顺序线性表的元素 */
+// O(1)
 void SeqList_Clear(SEQ_LIST* list)
 {
 	TAG_SEQ_LIST* seq_list = NULL;
@@ -98,6 +101,7 @@ void SeqList_Clear(SEQ_LIST* list)
 
 
 /* 获取顺序线性表中元素的个数 */
+// O(1)
 int SeqList_Length(SEQ_LIST* list)
 {
 	TAG_SEQ_LIST* seq_list = NULL;
@@ -116,6 +120,7 @@ int SeqList_Length(SEQ_LIST* list)
 
 
 /* 获取顺序线性表的最大容量 */
+// O(1)
 int SeqList_Capacity(SEQ_LIST* list)
 {
 	TAG_SEQ_LIST* seq_list = NULL;
@@ -133,6 +138,7 @@ int SeqList_Capacity(SEQ_LIST* list)
 
 
 /* 在下标为pos的位置插入元素 */
+// O(n)
 int SeqList_Insert(SEQ_LIST* list, SEQ_LIST_NODE* node, int pos)
 {
 	TAG_SEQ_LIST* seq_list = NULL;
@@ -178,6 +184,7 @@ int SeqList_Insert(SEQ_LIST* list, SEQ_LIST_NODE* node, int pos)
 
 
 /* 获取顺序线性表中下标为pos的元素的地址 */
+// O(1)
 SEQ_LIST_NODE* SeqList_Get(SEQ_LIST* list, int pos)
 {
 	TAG_SEQ_LIST* seq_list = NULL;
@@ -203,6 +210,7 @@ SEQ_LIST_NODE* SeqList_Get(SEQ_LIST* list, int pos)
 
 
 /* 删除顺序线性表中下标为pos的节点 */
+// O(n)
 SEQ_LIST_NODE* SeqList_Delete(SEQ_LIST* list, int pos)
 {
 	TAG_SEQ_LIST* seq_list = NULL;
