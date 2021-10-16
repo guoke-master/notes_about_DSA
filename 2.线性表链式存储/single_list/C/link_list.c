@@ -13,6 +13,7 @@ typedef struct TAG_LINK_LIST
 
 
 /* 创建链式线性表，返回线性表的地址 */
+// O(1)
 LINK_LIST* LinkList_Create()
 {
 	TAG_LINK_LIST* list = NULL;
@@ -35,6 +36,7 @@ LINK_LIST* LinkList_Create()
 
 
 /* 销毁链式线性表的空间 */
+// O(1)
 void LinkList_Destroy(LINK_LIST* list)
 {
 	TAG_LINK_LIST* link_list = NULL;
@@ -59,6 +61,7 @@ void LinkList_Destroy(LINK_LIST* list)
 
 
 /* 清空链式线性表的元素 */
+// O(1)
 void LinkList_Clear(LINK_LIST* list)
 {
 	TAG_LINK_LIST* link_list = NULL;
@@ -80,6 +83,7 @@ void LinkList_Clear(LINK_LIST* list)
 
 
 /* 获取链式线性表中元素的个数 */
+// O(1)
 int LinkList_Length(LINK_LIST* list)
 {
 	TAG_LINK_LIST* link_list = NULL;
@@ -100,6 +104,7 @@ int LinkList_Length(LINK_LIST* list)
 
 
 /* 在下标为pos的位置插入元素node */
+// O(n)
 int LinkList_Insert(LINK_LIST* list, LINK_LIST_NODE* node, int pos)
 {
 	int i = 0;
@@ -142,6 +147,7 @@ int LinkList_Insert(LINK_LIST* list, LINK_LIST_NODE* node, int pos)
 
 
 /* 获取线性表中下标为pos的元素的地址 */
+// O(n)
 LINK_LIST_NODE* LinkList_Get(LINK_LIST* list, int pos)
 {
 	int i = 0;
@@ -177,6 +183,7 @@ LINK_LIST_NODE* LinkList_Get(LINK_LIST* list, int pos)
 
 
 /* 删除链式线性表中下标为pos的节点 */
+// O(n)
 LINK_LIST_NODE* LinkList_Delete(LINK_LIST* list, int pos)
 {
 	int i = 0;
