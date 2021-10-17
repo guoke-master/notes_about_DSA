@@ -80,6 +80,7 @@ void SeqStack_Clear(SEQ_STACK* stack)
 void SeqStack_Push(SEQ_STACK* stack, SEQ_STACK_NODE* item)
 {
 	SEQ_LIST* seq_list = NULL;
+	int insert_pos = 0;
 
 	// 输入检查
 	if (stack == NULL || item == NULL)
@@ -92,7 +93,12 @@ void SeqStack_Push(SEQ_STACK* stack, SEQ_STACK_NODE* item)
 	seq_list = (SEQ_LIST*)stack;
 
 	// 向线性表尾部添加元素
-	SeqList_Insert(seq_list, (SEQ_LIST_NODE*)item, SeqList_Length(seq_list));		// 插入平均复杂度是O(n)，向尾部插入复杂度是O(1)
+	insert_pos = SeqList_Insert(seq_list, (SEQ_LIST_NODE*)item, SeqList_Length(seq_list));		// 插入平均复杂度是O(n)，向尾部插入复杂度是O(1)
+	if (insert_pos < 0)
+	{
+		printf("func SeqStack_Push() err: insert_pos < 0\n");
+		return;
+	}
 }
 
 /* 出栈 */
