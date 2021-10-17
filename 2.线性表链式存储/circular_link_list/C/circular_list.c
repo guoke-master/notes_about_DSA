@@ -13,6 +13,7 @@ typedef struct TAG_CIRCULAR_LIST
 
 
 /* 创建循环链表，返回循环链表的地址 */
+// O(1)
 CIRCULAR_LIST* CircularList_Create()
 {
 	TAG_CIRCULAR_LIST* circular_list = NULL;
@@ -33,6 +34,7 @@ CIRCULAR_LIST* CircularList_Create()
 
 
 /* 销毁循环链表的空间 */
+// O(1)
 void CircularList_Destroy(CIRCULAR_LIST* list)
 {
 	TAG_CIRCULAR_LIST* circular_list = NULL;
@@ -59,6 +61,7 @@ void CircularList_Destroy(CIRCULAR_LIST* list)
 
 
 /* 清空循环链表的元素 */
+// O(1)
 void CircularList_Clear(CIRCULAR_LIST* list)
 {
 	TAG_CIRCULAR_LIST* circular_list = NULL;
@@ -81,6 +84,7 @@ void CircularList_Clear(CIRCULAR_LIST* list)
 
 
 /* 获取循环链表中元素的个数 */
+// O(1)
 int CircularList_Length(CIRCULAR_LIST* list)
 {
 	TAG_CIRCULAR_LIST* circular_list = NULL;
@@ -100,6 +104,7 @@ int CircularList_Length(CIRCULAR_LIST* list)
 
 
 /* 获取循环链表中下标为pos的元素的地址 */
+// O(n)
 CIRCULAR_LIST_NODE* CircularList_Get(CIRCULAR_LIST* list, int pos)
 {
 	TAG_CIRCULAR_LIST* circular_list = NULL;
@@ -136,6 +141,7 @@ CIRCULAR_LIST_NODE* CircularList_Get(CIRCULAR_LIST* list, int pos)
 
 
 /* 在下标为pos的位置插入元素node，返回实际插入的位置 */
+// O(n)
 int CircularList_Insert(CIRCULAR_LIST* list, CIRCULAR_LIST_NODE* node, int pos)
 {
 	TAG_CIRCULAR_LIST* circular_list = NULL;
@@ -196,6 +202,7 @@ int CircularList_Insert(CIRCULAR_LIST* list, CIRCULAR_LIST_NODE* node, int pos)
 
 
 /* 删除循环链表中下标为pos的节点 */
+// O(n)
 CIRCULAR_LIST_NODE* CircularList_Delete(CIRCULAR_LIST* list, int pos)
 {
 	TAG_CIRCULAR_LIST* circular_list = NULL;
@@ -259,6 +266,7 @@ CIRCULAR_LIST_NODE* CircularList_Delete(CIRCULAR_LIST* list, int pos)
 
 
 /* 删除循环链表中的节点node */
+// O(n)
 CIRCULAR_LIST_NODE* CircularList_DeleteNode(CIRCULAR_LIST* list, CIRCULAR_LIST_NODE* node)
 {
 	TAG_CIRCULAR_LIST* circular_list = NULL;
@@ -304,6 +312,7 @@ CIRCULAR_LIST_NODE* CircularList_DeleteNode(CIRCULAR_LIST* list, CIRCULAR_LIST_N
 
 
 /* 重置游标，返回重置之后游标指向的节点 */
+// O(1)
 CIRCULAR_LIST_NODE* CircularList_ResetSlider(CIRCULAR_LIST* list)
 {
 	TAG_CIRCULAR_LIST* circular_list = NULL;
@@ -326,6 +335,7 @@ CIRCULAR_LIST_NODE* CircularList_ResetSlider(CIRCULAR_LIST* list)
 
 
 /* 获取当前游标指向的节点 */
+// O(1)
 CIRCULAR_LIST_NODE* CircularList_Current(CIRCULAR_LIST* list)
 {
 	TAG_CIRCULAR_LIST* circular_list = NULL;
@@ -346,6 +356,7 @@ CIRCULAR_LIST_NODE* CircularList_Current(CIRCULAR_LIST* list)
 
 
 /* 返回当前游标指向的节点，并且游标向前移动一步 */
+// O(1)
 CIRCULAR_LIST_NODE* CircularList_SliderNext(CIRCULAR_LIST* list)
 {
 	TAG_CIRCULAR_LIST* circular_list = NULL;
